@@ -1,0 +1,15 @@
+
+1.0.3
+- Updated to work with Joomla 3.x
+
+1.0.2
+- Exclude plugin from working in administrator
+- Fixed warning message about versions in virtuemart 2
+- Fixed error in Virtuemart 2 where you receive 'ensure that the class definition "VmImage" of the object you are trying to operate on was loaded...' error in shopping cart if product thumbnails are displayed
+
+1.0.1
+- Fixed problem were product was not removed from the cart for Virtuemart 2 if you have a custom field set
+- Updated the way Virtuemart 1/2 version was determined as it does not work on some earlier versions of Virtuemart 2
+
+1.0.1
+- Created
