@@ -1,260 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<install version="2.0" type="plugin" group="system" method="upgrade">
+<extension type="plugin" version="2.5" method="upgrade" group="system">
 	<name>System - VM Product Location Exclude</name>
-	<creationDate>2015-09-21</creationDate>
+	<creationDate>2025-03-07</creationDate>
 	<author>Seyi Awofadeju</author>
 	<copyright>Copyright (C) Seyi Awofadeju - All rights reserved.</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<authorEmail>dev@awofadeju.com</authorEmail>
 	<authorUrl>http://awodev.com</authorUrl>
-	<version>1.0.3</version>
+	<version>4.0.0</version>
 	<description>VMPRODUCTLOCEXCLUDE_PROGRAM_DESCRIPTION</description>
+	<namespace path="src">AwoDev\Plugin\System\Vmproductlocexclude</namespace>
 
 	<files>
-		<filename plugin="vmProductLocExclude">vmProductLocExclude.php</filename>
-		<filename plugin="vmProductLocExclude">index.html</filename>
-		<folder>vmProductLocExclude</folder>			
+		<folder>language</folder>
+		<folder plugin="vmproductlocexclude">services</folder>
+		<folder>src</folder>
 	</files> 
-	<languages>
-	   <language tag="en-GB">en-GB.plg_system_vmProductLocExclude.ini</language>
-	</languages>
 
-	<params addpath="/plugins/system/vmProductLocExclude/elements">
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 1" />
-	 	<param name="product1" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country1" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state1" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 2" />
-	 	<param name="product2" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country2" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state2" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 3" />
-	 	<param name="product3" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country3" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state3" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 4" />
-	 	<param name="product4" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country4" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state4" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 5" />
-	 	<param name="product5" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country5" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state5" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 6" />
-	 	<param name="product6" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country6" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state6" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 7" />
-	 	<param name="product7" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country7" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state7" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 8" />
-	 	<param name="product8" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country8" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state8" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 9" />
-	 	<param name="product9" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country9" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state9" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 10" />
-	 	<param name="product10" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country10" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state10" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 11" />
-	 	<param name="product11" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country11" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state11" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 12" />
-	 	<param name="product12" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country12" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state12" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 13" />
-	 	<param name="product13" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country13" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state13" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 14" />
-	 	<param name="product14" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country14" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state14" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 15" />
-	 	<param name="product15" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country15" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state15" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 16" />
-	 	<param name="product16" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country16" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state16" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 17" />
-	 	<param name="product17" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country17" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state17" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 18" />
-	 	<param name="product18" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country18" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state18" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 19" />
-	 	<param name="product19" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country19" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state19" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-	 	<param type="title" default="VMPRODUCTLOCEXCLUDE_RULE 20" />
-	 	<param name="product20" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-		<param name="country20" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-		<param name="state20" type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-		
-		
-	</params>
-
-	
 	<config>
         <fields name="params">
-		
-			<fieldset name="r1" label="VMPRODUCTLOCEXCLUDE_RULE1" description="" >
-				<field name="product1" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country1" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state1"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r2" label="VMPRODUCTLOCEXCLUDE_RULE2" description="" >
-				<field name="product2" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country2" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state2"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r3" label="VMPRODUCTLOCEXCLUDE_RULE3" description="" >
-				<field name="product3" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country3" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state3"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r4" label="VMPRODUCTLOCEXCLUDE_RULE4" description="" >
-				<field name="product4" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country4" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state4"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r5" label="VMPRODUCTLOCEXCLUDE_RULE5" description="" >
-				<field name="product5" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country5" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state5"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r6" label="VMPRODUCTLOCEXCLUDE_RULE6" description="" >
-				<field name="product6" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country6" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state6"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r7" label="VMPRODUCTLOCEXCLUDE_RULE7" description="" >
-				<field name="product7" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country7" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state7"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r8" label="VMPRODUCTLOCEXCLUDE_RULE8" description="" >
-				<field name="product8" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country8" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state8"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r9" label="VMPRODUCTLOCEXCLUDE_RULE9" description="" >
-				<field name="product9" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country9" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state9"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r10" label="VMPRODUCTLOCEXCLUDE_RULE10" description="" >
-				<field name="product10" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country10" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state10"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r11" label="VMPRODUCTLOCEXCLUDE_RULE11" description="" >
-				<field name="product11" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country11" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state11"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r12" label="VMPRODUCTLOCEXCLUDE_RULE12" description="" >
-				<field name="product12" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country12" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state12"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r13" label="VMPRODUCTLOCEXCLUDE_RULE13" description="" >
-				<field name="product13" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country13" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state13"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r14" label="VMPRODUCTLOCEXCLUDE_RULE14" description="" >
-				<field name="product14" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country14" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state14"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r15" label="VMPRODUCTLOCEXCLUDE_RULE15" description="" >
-				<field name="product15" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country15" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state15"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r16" label="VMPRODUCTLOCEXCLUDE_RULE16" description="" >
-				<field name="product16" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country16" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state16"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r17" label="VMPRODUCTLOCEXCLUDE_RULE17" description="" >
-				<field name="product17" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country17" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state17"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r18" label="VMPRODUCTLOCEXCLUDE_RULE18" description="" >
-				<field name="product18" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country18" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state18"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r19" label="VMPRODUCTLOCEXCLUDE_RULE19" description="" >
-				<field name="product19" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country19" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state19"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-			<fieldset name="r20" label="VMPRODUCTLOCEXCLUDE_RULE20" description="" >
-				<field name="product20" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
-				<field name="country20" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
-				<field name="state20"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
-			</fieldset>	
-			
-						
+			<fieldset name="basic">
+				<field
+					name="rule"
+					type="subform"
+					label="Rule"
+					layout="joomla.form.field.subform.repeatable-table"
+					multiple="true"
+					buttons= "add,remove,move"
+					>
+					<form>
+						<fieldset>
+							<field name="product" type="text" default="" label="VMPRODUCTLOCEXCLUDE_PRODUCT" description ="VMPRODUCTLOCEXCLUDE_PRODUCT_DESC" />
+							<field name="country" type="text" default="" label="VMPRODUCTLOCEXCLUDE_COUNTRY" description ="VMPRODUCTLOCEXCLUDE_COUNTRY_DESC" />
+							<field name="state"   type="text" default="" label="VMPRODUCTLOCEXCLUDE_STATE" description ="VMPRODUCTLOCEXCLUDE_STATE_DESC" />
+						</fieldset>
+					</form>
+				</field>
+			</fieldset>
 		</fields>
-		
 	</config>
 
-	
-</install>
-
-
-
+</extension>
 

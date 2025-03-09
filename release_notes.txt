@@ -1,4 +1,7 @@
 
+4.0.0
+- Updated to work with Joomla 5 / Virtuemart 4
+
 1.0.3
 - Updated to work with Joomla 3.x
 
